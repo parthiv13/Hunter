@@ -4,7 +4,7 @@ const cheerio = require('cheerio'),
     fs = require('fs'),
     path = require('path');
 
-var $ = cheerio.load(fs.readFileSync(path.join(__dirname, '/index.html')), {
+var $ = cheerio.load(fs.readFileSync(path.join(__dirname, '/Hunter.html')), {
     normalizeWhitespace: true,
     xmlMode: true
 });
@@ -26,3 +26,5 @@ $('div.result').each(function (i, elem) {
    //console.log(leads);
 
 })
+
+writer.end();
