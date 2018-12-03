@@ -29,10 +29,12 @@ $('tr').each(function (i, elem) {
 
 })
 
-//writer.end();
+writer.end();
 var arr = [];
 
-writer.pipe(fs.createWriteStream(path.join(__dirname, 'output.csv')));
+writerr = csvWriter({ sendHeaders: false }),
+
+writerr.pipe(fs.createWriteStream(path.join(__dirname, 'output.csv')));
 //writer.write({ name: 'hi!', email: 'Lu!'});
 
 csv
@@ -59,17 +61,17 @@ csv
                         if (title == 5) {
                             let valid = await page.$eval('div#content > table tr:nth-child(5) td:nth-child(5)', item => item.innerHTML);
                             console.log(valid);
-                            writer.write({ name: email[1], email: valid })
+                            writerr.write({ name: email[1], email: valid })
                         }
                         else {
                             let reason = await page.$eval('div#content > table tr:nth-child(4) td:nth-child(5)', item => item.innerHTML);
                             console.log(reason);
-                            writer.write({ name: email[1], email: reason})
+                            writerr.write({ name: email[1], email: reason})
                         }
                     }
                     else {
                         console.log('email tho de!');
-                        writer.write({ name: email[1], email: 'email tho de!'})
+                        writerr.write({ name: email[1], email: 'email tho de!'})
                     }
                 }
 
