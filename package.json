@@ -6,11 +6,15 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "",
+  "author": "parthiv13",
   "license": "ISC",
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
-    "csv-write-stream": "^2.0.0"
+    "csv-write-stream": "^2.0.0",
+    "fast-csv": "^2.4.1",
+    "macaddress": "^0.2.9",
+    "puppeteer": "^1.11.0",
+    "request": "^2.88.0"
   },
   "devDependencies": {},
   "description": ""
