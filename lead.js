@@ -10,9 +10,6 @@ const macaddress = require('macaddress');
 
 var arr = [];
 
-var currdate = new Date();
-console.log(currdate < new Date('Saturday Dec 15 2018 17:31:58 GMT-0800 (IST)'));
-
 macaddress.one(function (err, mac) {
     console.log(mac)
     request({
