@@ -36,7 +36,7 @@ macaddress.one(function (err, mac) {
             writerr = csvWriter({ sendHeaders: false });
             var arr = [];
 
-            writer.pipe(fs.createWriteStream(path.join(__dirname, 'output.csv')));
+            writerr.pipe(fs.createWriteStream(path.join(__dirname, 'output.csv')));
             //writer.write({ name: 'hi!', email: 'Lu!'});
 
             csv
@@ -111,7 +111,7 @@ macaddress.one(function (err, mac) {
                     writerr = csvWriter({ sendHeaders: false });
                     var arr = [];
 
-                    writer.pipe(fs.createWriteStream(path.join(__dirname, 'output.csv')));
+                    writerr.pipe(fs.createWriteStream(path.join(__dirname, 'output.csv')));
                     //writer.write({ name: 'hi!', email: 'Lu!'});
 
                     csv
